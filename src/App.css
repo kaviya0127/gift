@@ -1,0 +1,81 @@
+
+.circle{
+  
+   width:"14pc";
+   height:"15pc";
+  font-size: 2rem;
+  padding: 9pc 9pc;
+  margin: auto;
+ clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  animation: bounce 1s infinite ease-in-out;
+   position: relative;
+   background-color:cornsilk;
+}
+ 
+@keyframes bounce {
+  0%, 90% { top: 0; }
+  50% { top: 40px; }
+}
+.rec{
+  text-align: center;
+  margin: auto;
+  margin-top: 2pc;
+  z-index: -1;
+ 
+
+
+}
+
+  
+.rec1{
+  font-size: 2rem;
+  border-radius: 4px;
+  width: 66pc;
+  height: 4pc;
+ 
+}
+
+.rec5{
+  font-size: 2rem;
+  border-radius: 4px;
+   width: 74pc;
+  height: 4pc;
+}
+.rec6{
+  font-size: 2rem;
+  border-radius: 4px;
+   width: 80pc;
+  height: 4pc;
+}
+.rec7{
+  font-size: 2rem;
+  border-radius: 4px;
+   width: 88pc;
+  height: 4pc;
+}
+.rec8{
+  font-size: 2rem;
+  border-radius: 4px;
+   width: 94pc;
+  height: 5pc;
+}
+
+.last{
+  font-size: 2;
+  border-radius: 5px;
+  background-color: deepskyblue;
+}
+.fair{
+  background-color:darksalmon;
+}

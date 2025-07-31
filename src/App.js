@@ -1,0 +1,49 @@
+import React from 'react';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import audio from '../src/assets/audio.mp3'
+import Front from './Front.jsx';
+import Second from './Second';
+import Photo from './Photo.jsx';
+import  { useRef, useState } from 'react'
+
+
+
+const App = () => {
+  const audioRef = useRef(null)
+   const [playing,setPlaying] =useState(false);
+
+   function handleClick(){
+      
+          const song = audioRef.current;
+          if(playing){
+           song.pause()
+          }
+          else{
+           song.play()
+          }
+          setTimeout(()=>{
+            setPlaying(!playing)
+          },100)
+          
+        
+      }
+  return (
+    <div>
+       <audio ref={audioRef}>
+        <source src={audio}></source>
+      </audio>
+      <BrowserRouter>
+    
+      <Routes>
+        <Route path='/' element={<Front playing={playing} setPlaying={setPlaying} audioRef={audioRef} handleClick={handleClick}/>} />
+        <Route path='/second' element={<Second playing={playing} setPlaying={setPlaying} audioRef={audioRef} handleClick={handleClick}/>} />
+        <Route path='/photo' element={<Photo/>}/>
+
+      
+      </Routes>
+      </BrowserRouter>
+    </div>
+  )
+}
+
+export default App
