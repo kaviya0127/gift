@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import audio from '../src/assets/audio.mp3'
+import songs from '../src/assets/song.mp3'
 import Front from './Front.jsx';
 import Second from './Second';
 import Photo from './Photo.jsx';
@@ -30,9 +30,9 @@ const App = () => {
   return (
     <div>
        <audio ref={audioRef}>
-        <source src={audio}></source>
+        <source src={songs}></source>
       </audio>
-      <BrowserRouter>
+      <BrowserRouter basename="/gift">
     
       <Routes>
         <Route path='/' element={<Front playing={playing} setPlaying={setPlaying} audioRef={audioRef} handleClick={handleClick}/>} />
